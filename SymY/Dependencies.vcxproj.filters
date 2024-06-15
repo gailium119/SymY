@@ -1,0 +1,1002 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\altsvc.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\amigaos.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\asyn-ares.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\asyn-thread.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\base64.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\bearssl.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\bufq.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\bufref.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-h1-proxy.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-h2-proxy.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-haproxy.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-https-connect.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cfilters.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-socket.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\c-hyper.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\cipher_suite.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\cleartext.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\conncache.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\connect.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\content_encoding.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cookie.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\cram.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_addrinfo.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_des.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_endian.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_fnmatch.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_get_line.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_gethostname.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_gssapi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_memrchr.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_msh3.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_multibyte.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_ngtcp2.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_ntlm_core.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_osslq.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_path.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_quiche.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_range.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_rtmp.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_sasl.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_sha512_256.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_sspi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_threads.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_trc.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cw-out.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\dict.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\digest.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\digest_sspi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\doh.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\dynbuf.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\dynhds.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\easy.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\easygetopt.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\easyoptions.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\escape.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\file.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\fileinfo.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\fopen.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\formdata.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\ftp.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\ftplistparser.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\getenv.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\getinfo.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\gopher.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\gsasl.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\gtls.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hash.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\headers.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hmac.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostasyn.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\hostcheck.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostip.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostip4.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostip6.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostsyn.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hsts.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_aws_sigv4.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_chunks.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_digest.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_negotiate.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_ntlm.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_proxy.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http1.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http2.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\idn.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\if2ip.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\imap.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\inet_ntop.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\inet_pton.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\keylog.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\krb5.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\krb5_gssapi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\krb5_sspi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\ldap.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vssh\libssh.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vssh\libssh2.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\llist.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\macos.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\mbedtls.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\mbedtls_threadlock.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\md4.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\md5.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\memdebug.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\mime.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\mprintf.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\mqtt.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\multi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\netrc.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\nonblock.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\noproxy.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\ntlm.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\ntlm_sspi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\oauth2.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\openldap.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\openssl.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\parsedate.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\pingpong.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\pop3.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\progress.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\psl.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\rand.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\rename.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\request.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\rtsp.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\rustls.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\schannel.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\schannel_verify.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\sectransp.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\select.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\sendf.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\setopt.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\sha256.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\share.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\slist.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\smb.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\smtp.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\socketpair.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\socks.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\socks_gssapi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\socks_sspi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\speedcheck.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\splay.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\spnego_gssapi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\spnego_sspi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strcase.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strdup.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strerror.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strtok.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strtoofft.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\system_win32.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\telnet.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\tftp.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\timediff.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\timeval.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\transfer.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\url.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\urlapi.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\vauth.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\version.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\version_win32.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic-tls.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\vtls.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\warnless.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vssh\wolfssh.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\wolfssl.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\ws.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\x509asn1.c">
+      <Filter>curl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\altsvc.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\amigaos.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\arpa_telnet.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\asyn.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\bearssl.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\bufq.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\bufref.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-h1-proxy.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-h2-proxy.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-haproxy.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-https-connect.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cfilters.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-socket.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\c-hyper.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\cipher_suite.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\conncache.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\connect.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\content_encoding.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cookie.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_addrinfo.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_base64.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_ctype.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_des.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_endian.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_fnmatch.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_get_line.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_gethostname.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_gssapi.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_hmac.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_krb5.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_ldap.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_md4.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_md5.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_memory.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_memrchr.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_msh3.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_multibyte.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_ngtcp2.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_ntlm_core.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_osslq.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_path.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_printf.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_quiche.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_range.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_rtmp.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_sasl.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_setup.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_setup_once.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_sha256.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_sha512_256.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_sspi.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_threads.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_trc.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curlx.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cw-out.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\dict.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vauth\digest.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\doh.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\dynbuf.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\dynhds.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\easy_lock.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\easyif.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\easyoptions.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\escape.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\file.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\fileinfo.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\fopen.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\formdata.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\ftp.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\ftplistparser.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\functypes.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\getinfo.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\gopher.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\gtls.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\hash.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\headers.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\hostcheck.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\hostip.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\hsts.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_aws_sigv4.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_chunks.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_digest.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_negotiate.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_ntlm.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_proxy.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http1.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http2.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\idn.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\if2ip.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\imap.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\inet_ntop.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\inet_pton.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\keylog.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\llist.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\macos.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\mbedtls.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\mbedtls_threadlock.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\memdebug.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\mime.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\mqtt.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\multihandle.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\multiif.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\netrc.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\nonblock.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\noproxy.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vauth\ntlm.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\openssl.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\parsedate.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\pingpong.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\pop3.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\progress.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\psl.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\rand.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\rename.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\request.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\rtsp.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\rustls.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\schannel.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\schannel_int.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\sectransp.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\select.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\sendf.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\setopt.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\setup-vms.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\share.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\sigpipe.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\slist.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\smb.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\smtp.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\sockaddr.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\socketpair.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\socks.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\speedcheck.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\splay.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vssh\ssh.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strcase.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strdup.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strerror.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strtok.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strtoofft.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\system_win32.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\telnet.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\tftp.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\timediff.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\timeval.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\transfer.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\url.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\urlapi-int.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\urldata.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vauth\vauth.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\version_win32.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic_int.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic-tls.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\vtls.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\vtls_int.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\warnless.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\wolfssl.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\ws.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\x509asn1.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="curl">
+      <UniqueIdentifier>{0198f8e6-40fe-4e9d-9ae7-63b30eb84a9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

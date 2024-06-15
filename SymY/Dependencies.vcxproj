@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{B4830129-079D-3A4B-8789-D59290C6F1B5}</ProjectGuid>
+    <WindowsSDKDesktopARMSupport>true</WindowsSDKDesktopARMSupport>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+    <WindowsTargetPlatformVersion Condition="'$(VisualStudioVersion)' == '10.0'">7.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(VisualStudioVersion)' == '11.0'">8.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(VisualStudioVersion)' == '12.0'">8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(VisualStudioVersion)' == '14.0'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(VisualStudioVersion)' == '15.0'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(VisualStudioVersion)' == '16.0'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(VisualStudioVersion)' == '17.0'">10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '10.0'">v100</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0'">v110</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '16.0'">v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '17.0'">v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\third-party\curl\include;$(ProjectDir)..\third-party\curl\lib\..\include;$(ProjectDir)..\third-party\curl\lib\..;$(ProjectDir)..\third-party\curl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CURL_STATICLIB;CURL_HIDDEN_SYMBOLS;curl_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;USE_SCHANNEL;USE_WINDOWS_SSPI;</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\third-party\curl\include;$(ProjectDir)..\third-party\curl\lib\..\include;$(ProjectDir)..\third-party\curl\lib\..;$(ProjectDir)..\third-party\curl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CURL_STATICLIB;CURL_HIDDEN_SYMBOLS;curl_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;USE_SCHANNEL;USE_WINDOWS_SSPI;</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\third-party\curl\include;$(ProjectDir)..\third-party\curl\lib\..\include;$(ProjectDir)..\third-party\curl\lib\..;$(ProjectDir)..\third-party\curl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CURL_STATICLIB;CURL_HIDDEN_SYMBOLS;curl_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;USE_SCHANNEL;USE_WINDOWS_SSPI;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\third-party\curl\include;$(ProjectDir)..\third-party\curl\lib\..\include;$(ProjectDir)..\third-party\curl\lib\..;$(ProjectDir)..\third-party\curl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CURL_STATICLIB;CURL_HIDDEN_SYMBOLS;curl_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;USE_SCHANNEL;USE_WINDOWS_SSPI;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\third-party\curl\include;$(ProjectDir)..\third-party\curl\lib\..\include;$(ProjectDir)..\third-party\curl\lib\..;$(ProjectDir)..\third-party\curl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CURL_STATICLIB;CURL_HIDDEN_SYMBOLS;curl_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;USE_SCHANNEL;USE_WINDOWS_SSPI;</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\third-party\curl\include;$(ProjectDir)..\third-party\curl\lib\..\include;$(ProjectDir)..\third-party\curl\lib\..;$(ProjectDir)..\third-party\curl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CURL_STATICLIB;CURL_HIDDEN_SYMBOLS;curl_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;USE_SCHANNEL;USE_WINDOWS_SSPI;</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\third-party\curl\include;$(ProjectDir)..\third-party\curl\lib\..\include;$(ProjectDir)..\third-party\curl\lib\..;$(ProjectDir)..\third-party\curl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CURL_STATICLIB;CURL_HIDDEN_SYMBOLS;curl_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;USE_SCHANNEL;USE_WINDOWS_SSPI;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\third-party\curl\include;$(ProjectDir)..\third-party\curl\lib\..\include;$(ProjectDir)..\third-party\curl\lib\..;$(ProjectDir)..\third-party\curl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CURL_STATICLIB;CURL_HIDDEN_SYMBOLS;curl_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;USE_SCHANNEL;USE_WINDOWS_SSPI;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\altsvc.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\amigaos.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\arpa_telnet.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\asyn.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\bufq.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\bufref.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\c-hyper.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-h1-proxy.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-h2-proxy.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-haproxy.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-https-connect.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cf-socket.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cfilters.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\conncache.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\connect.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\content_encoding.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cookie.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_addrinfo.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_base64.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_ctype.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_des.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_endian.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_fnmatch.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_get_line.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_gethostname.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_gssapi.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_hmac.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_krb5.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_ldap.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_md4.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_md5.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_memory.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_memrchr.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_multibyte.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_ntlm_core.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_path.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_printf.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_range.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_rtmp.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_sasl.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_setup.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_setup_once.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_sha256.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_sha512_256.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_sspi.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_threads.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curl_trc.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\curlx.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\cw-out.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\dict.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\doh.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\dynbuf.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\dynhds.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\easy_lock.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\easyif.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\easyoptions.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\escape.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\file.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\fileinfo.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\fopen.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\formdata.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\ftp.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\ftplistparser.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\functypes.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\getinfo.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\gopher.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\hash.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\headers.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\hostip.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\hsts.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http1.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http2.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_aws_sigv4.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_chunks.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_digest.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_negotiate.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_ntlm.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\http_proxy.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\idn.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\if2ip.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\imap.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\inet_ntop.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\inet_pton.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\llist.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\macos.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\memdebug.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\mime.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\mqtt.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\multihandle.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\multiif.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\netrc.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\nonblock.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\noproxy.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\parsedate.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\pingpong.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\pop3.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\progress.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\psl.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\rand.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\rename.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\request.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\rtsp.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\select.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\sendf.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\setopt.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\setup-vms.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\share.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\sigpipe.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\slist.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\smb.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\smtp.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\sockaddr.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\socketpair.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\socks.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\speedcheck.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\splay.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strcase.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strdup.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strerror.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strtok.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\strtoofft.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\system_win32.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\telnet.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\tftp.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\timediff.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\timeval.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\transfer.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\url.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\urlapi-int.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\urldata.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\version_win32.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\warnless.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\ws.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vauth\digest.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vauth\ntlm.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vauth\vauth.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\bearssl.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\cipher_suite.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\gtls.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\hostcheck.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\keylog.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\mbedtls.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\mbedtls_threadlock.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\openssl.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\rustls.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\schannel.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\schannel_int.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\sectransp.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\vtls.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\vtls_int.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\wolfssl.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vtls\x509asn1.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_msh3.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_ngtcp2.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_osslq.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_quiche.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic_int.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic-tls.h" />
+    <ClInclude Include="$(ProjectDir)..\third-party\curl\lib\vssh\ssh.h" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\altsvc.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\amigaos.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\asyn-ares.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\asyn-thread.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\base64.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\bufq.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\bufref.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\c-hyper.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-h1-proxy.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-h2-proxy.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-haproxy.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-https-connect.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cf-socket.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cfilters.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\conncache.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\connect.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\content_encoding.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cookie.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_addrinfo.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_des.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_endian.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_fnmatch.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_get_line.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_gethostname.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_gssapi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_memrchr.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_multibyte.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_ntlm_core.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_path.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_range.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_rtmp.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_sasl.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_sha512_256.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_sspi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_threads.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\curl_trc.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\cw-out.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\dict.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\doh.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\dynbuf.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\dynhds.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\easy.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\easygetopt.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\easyoptions.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\escape.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\file.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\fileinfo.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\fopen.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\formdata.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\ftp.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\ftplistparser.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\getenv.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\getinfo.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\gopher.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hash.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\headers.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hmac.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostasyn.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostip.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostip4.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostip6.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hostsyn.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\hsts.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http1.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http2.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_aws_sigv4.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_chunks.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_digest.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_negotiate.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_ntlm.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\http_proxy.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\idn.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\if2ip.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\imap.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\inet_ntop.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\inet_pton.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\krb5.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\ldap.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\llist.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\macos.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\md4.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\md5.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\memdebug.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\mime.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\mprintf.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\mqtt.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\multi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\netrc.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\nonblock.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\noproxy.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\openldap.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\parsedate.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\pingpong.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\pop3.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\progress.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\psl.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\rand.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\rename.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\request.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\rtsp.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\select.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\sendf.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\setopt.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\sha256.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\share.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\slist.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\smb.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\smtp.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\socketpair.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\socks.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\socks_gssapi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\socks_sspi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\speedcheck.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\splay.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strcase.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strdup.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strerror.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strtok.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\strtoofft.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\system_win32.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\telnet.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\tftp.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\timediff.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\timeval.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\transfer.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\url.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\urlapi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\version.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\version_win32.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\warnless.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\ws.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\cleartext.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\cram.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\digest.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\digest_sspi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\gsasl.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\krb5_gssapi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\krb5_sspi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\ntlm.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\ntlm_sspi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\oauth2.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\spnego_gssapi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\spnego_sspi.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vauth\vauth.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\bearssl.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\cipher_suite.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\gtls.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\hostcheck.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\keylog.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\mbedtls.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\mbedtls_threadlock.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\openssl.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\rustls.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\schannel.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\schannel_verify.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\sectransp.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\vtls.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\wolfssl.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vtls\x509asn1.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_msh3.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_ngtcp2.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_osslq.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\curl_quiche.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vquic\vquic-tls.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vssh\libssh.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vssh\libssh2.c" />
+    <ClCompile Include="$(ProjectDir)..\third-party\curl\lib\vssh\wolfssh.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
