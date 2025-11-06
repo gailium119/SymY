@@ -13,22 +13,7 @@
 #include<algorithm>
 #include<string>
 #include<vector>
-//返回文件版本号
-//@params:filename:文件名
-struct Version {
-    int VerMajor;
-    int VerMinor;
-    int VerFull;
-    int VerUbr;
-    bool isdebug;
-	Version(){
-    VerMajor = 0;
-    VerMinor = 0;
-    VerFull = 0;
-    VerUbr = 0;
-	isdebug = false;
-	}
-};
+#include "PE.h"
 Version GetFileVersionW(LPCWSTR filename)
 {
     Version ver;
@@ -322,8 +307,64 @@ bool VerifyPE( LPCSTR filename,LPCWSTR arch,bool isdebug,LPCWSTR symname,LPCWSTR
     else if (pFil->Machine == IMAGE_FILE_MACHINE_ARM ||
         pFil->Machine == IMAGE_FILE_MACHINE_THUMB ||
         pFil->Machine == IMAGE_FILE_MACHINE_ARMNT) {
+
+        LPCWSTR realarch = L"arm";
+        PIMAGE_SECTION_HEADER sectionHeader;
+        DWORD ptr;
+        UINT nSectionCount;
+        UINT i;
+        uintptr_t offset;
+        UINT cbDebug = 0;
+        PIMAGE_DEBUG_DIRECTORY imageDebugDirectory;
+        PIMAGE_OPTIONAL_HEADER32 pOptionalHeader = (PIMAGE_OPTIONAL_HEADER32) & (pNth->OptionalHeader);
+
+        cbDebug = pOptionalHeader->DataDirectory[IMAGE_DIRECTORY_ENTRY_DEBUG].Size;
+        ptr = pOptionalHeader->DataDirectory[IMAGE_DIRECTORY_ENTRY_DEBUG].VirtualAddress;
+        sectionHeader = IMAGE_FIRST_SECTION(pNth);
+        nSectionCount = pNth->FileHeader.NumberOfSections;
+        for (i = 0; i <= nSectionCount; ++i, ++sectionHeader)
+        {
+            if ((sectionHeader->VirtualAddress) > ptr)
+            {
+                sectionHeader--;
+                break;
+            }
+        }
+        if (i > nSectionCount)
+        {
+            sectionHeader = IMAGE_FIRST_SECTION(pNth);
+            UINT nSectionCount = pNth->FileHeader.NumberOfSections;
+            for (i = 0; i < nSectionCount - 1; ++i, ++sectionHeader);
+        }
+        offset = ptr + (uintptr_t)sectionHeader->PointerToRawData + (uintptr_t)pFileBuffer - (uintptr_t)sectionHeader->VirtualAddress;
+        while (cbDebug >= sizeof(IMAGE_DEBUG_DIRECTORY))
+        {
+            imageDebugDirectory = (PIMAGE_DEBUG_DIRECTORY)(offset);
+            offset += sizeof(IMAGE_DEBUG_DIRECTORY);
+            if (imageDebugDirectory->Type == IMAGE_DEBUG_TYPE_CODEVIEW)
+            {
+                LPSTR str = (LPSTR)((uintptr_t)pFileBuffer + imageDebugDirectory->PointerToRawData) + sizeof(DWORD) * 2 + sizeof(GUID);
+                cbDebug -= (UINT)sizeof(IMAGE_DEBUG_DIRECTORY);
+                std::wstring filename2 = symname;
+                wchar_t verbuf[12];
+                wsprintfW(verbuf, L"%d.%d", ver.VerMajor, ver.VerMinor);
+                WCHAR buffer[200];
+                mbstowcs_s(0, buffer, str, strlen(str));
+                std::wstring symname = buffer;
+                bool isarm64arm = false;
+                auto str1 = (symname.substr(0, symname.rfind(L'.')) + filename2.substr(filename2.rfind(L'.')));
+                if (_wcsicmp(str1.c_str(), (std::wstring(L"w") + filename2).c_str()) == 0) isarm64arm = true;
+                if (_wcsicmp(str1.c_str(), (std::wstring(L"y") + filename2).c_str()) == 0) isarm64arm = true;
+                if (isarm64arm) realarch = L"arm64arm";
+                else realarch = L"arm";
+                wprintf(L"symname=%s str1=%s filename2=%s realarch=%s\n", symname.c_str(), str1.c_str(), filename2.c_str(), realarch);
+
+                break;
+            }
+        }
+
         free(buffer);
-        if (_wcsicmp(arch, L"arm") != 0)return false;
+        if (_wcsicmp(arch, realarch) != 0)return false;
     }
 #if _MSC_VER > 1700
     else if (pFil->Machine == IMAGE_FILE_MACHINE_ARM64) {
@@ -331,6 +372,7 @@ bool VerifyPE( LPCSTR filename,LPCWSTR arch,bool isdebug,LPCWSTR symname,LPCWSTR
         if (_wcsicmp(arch, L"arm64") != 0)return false;
     }
 #endif
+    printf("Import table: \"%ws\", length: %d\n", importtable, wcslen(importtable));
     if (importtable != NULL && wcslen(importtable)!=0) {
         std::string realimporttables = GetImportDLLs(filename);
         std::string importtables = wstring2string(importtable);

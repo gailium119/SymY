@@ -27,6 +27,15 @@
     <ClCompile Include="PE.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Download.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Repro\PEInfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Repro\SymRepro.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SymDL.h">
@@ -36,6 +45,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="PE.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Download.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Repro\PEInfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Repro\SymRepro.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

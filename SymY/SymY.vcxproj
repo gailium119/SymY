@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|ARM">
@@ -69,49 +69,49 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ExternalIncludePath>$(ProjectDir)..\third-party\curl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
-    <OutDir>$(SolutionDir)Output\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Output\VC$(PlatformToolsetVersion)\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
     <IncludePath>$(ProjectDir)..\third-party\curl\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ExternalIncludePath>$(ProjectDir)..\third-party\curl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
-    <OutDir>$(SolutionDir)Output\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Output\VC$(PlatformToolsetVersion)\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
     <IncludePath>$(ProjectDir)..\third-party\curl\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ExternalIncludePath>$(ProjectDir)..\third-party\curl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
-    <OutDir>$(SolutionDir)Output\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Output\VC$(PlatformToolsetVersion)\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
     <IncludePath>$(ProjectDir)..\third-party\curl\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ExternalIncludePath>$(ProjectDir)..\third-party\curl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
-    <OutDir>$(SolutionDir)Output\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Output\VC$(PlatformToolsetVersion)\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
     <IncludePath>$(ProjectDir)..\third-party\curl\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ExternalIncludePath>$(ProjectDir)..\third-party\curl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
-    <OutDir>$(SolutionDir)Output\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Output\VC$(PlatformToolsetVersion)\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
     <IncludePath>$(ProjectDir)..\third-party\curl\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ExternalIncludePath>$(ProjectDir)..\third-party\curl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
-    <OutDir>$(SolutionDir)Output\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Output\VC$(PlatformToolsetVersion)\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ExternalIncludePath>$(ProjectDir)..\third-party\curl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
-    <OutDir>$(SolutionDir)Output\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Output\VC$(PlatformToolsetVersion)\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
     <IncludePath>$(ProjectDir)..\third-party\curl\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ExternalIncludePath>$(ProjectDir)..\third-party\curl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
-    <OutDir>$(SolutionDir)Output\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Output\VC$(PlatformToolsetVersion)\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\SymY\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -243,13 +243,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CurlSelectMulti.cpp" />
+    <ClCompile Include="Download.cpp" />
+    <ClCompile Include="Repro\PEInfo.cpp" />
+    <ClCompile Include="Repro\SymRepro.cpp" />
     <ClCompile Include="SymDL.cpp" />
     <ClCompile Include="SymY.cpp" />
     <ClCompile Include="PE.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CurlSelectMulti.h" />
+    <ClInclude Include="Download.h" />
     <ClInclude Include="PE.h" />
+    <ClInclude Include="Repro\PEInfo.h" />
+    <ClInclude Include="Repro\SymRepro.h" />
     <ClInclude Include="SymDL.h" />
   </ItemGroup>
   <ItemGroup>

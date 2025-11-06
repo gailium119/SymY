@@ -1,11 +1,11 @@
 #include "CurlSelectMulti.h"
-#include <iostream>
 #include <chrono>
 
 #define SYMY_MAX_THREADS 50
 
 using namespace std;
 
+bool g_searchonce = false;
 // Debug callback function for CURL
 static int OnDebug(CURL* handle, curl_infotype itype, char* pData, size_t size, void* userptr)
 {
@@ -166,13 +166,13 @@ CURL* CurlSelectMulti::CreateCurl()
     curl_easy_setopt(curl, CURLOPT_TCP_KEEPALIVE, 1L);
     curl_easy_setopt(curl, CURLOPT_TCP_KEEPIDLE, 300L);
     curl_easy_setopt(curl, CURLOPT_TCP_KEEPINTVL, 200L);
-    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 100);
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10);
     curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1);
     curl_easy_setopt(curl, CURLOPT_COOKIESESSION, 1);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
     curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
-    curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 100);
+    curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 10);
     return curl;
 }
 
@@ -203,6 +203,10 @@ void CurlSelectMulti::dealTask()
             lk.unlock();
             this_thread::sleep_for(chrono::milliseconds(20));
         }
+    }
+    if (g_searchonce && m_foundFiles.size() > 0) {
+        m_bRunning = false;
+        m_mapRunningTask.clear();
     }
 }
 
@@ -247,22 +251,23 @@ void CurlSelectMulti::readTaskResult()
                 if (m->data.result != CURLE_OK)
                 {
                     m_failedNum++;
-                    printf("Failed %d, failedNum %d, taskid %d, %s\n", m->data.result, m_failedNum, m_mapRunningTask[e]->taskid, m_mapRunningTask[e]->strUrl.c_str());
-                    m_foundFiles.push_back(m_mapRunningTask[e]->strUrl);
+                    printf("Failed %d, failedNum %d, taskid %d, %s\n", m->data.result, m_failedNum, it->second->taskid, it->second->strUrl.c_str());
+                    m_foundFiles.push_back(it->second->strUrl);
                 }
                 else
                 {
                     m_successNum++;
                     long lStateCode = 0;
                     m->data.result = curl_easy_getinfo(m->easy_handle, CURLINFO_RESPONSE_CODE, &lStateCode);
-                    if (lStateCode != 200)
+                    if (lStateCode != 200 && m_mapRunningTask.count(e) != 0)
                     {
-                        fprintf(stderr, "request error %ld, failedNum %d, taskid %d, %s\n", lStateCode, m_failedNum, m_mapRunningTask[e]->taskid, m_mapRunningTask[e]->strUrl.c_str());
+                        if(it->second != nullptr && it->second->strUrl.c_str() != NULL)
+                            fprintf(stderr, "request error %ld, failedNum %d, taskid %d, %s\n", lStateCode, m_failedNum, it->second->taskid, it->second->strUrl.c_str());
                     }
                     else
                     {
-                        printf("Found taskid %d, %s\n", m_mapRunningTask[e]->taskid, m_mapRunningTask[e]->strUrl.c_str());
-                        m_foundFiles.push_back(m_mapRunningTask[e]->strUrl);
+                        printf("Found taskid %d, %s\n", it->second->taskid, it->second->strUrl.c_str());
+                        m_foundFiles.push_back(it->second->strUrl);
                     }
                 }
                 m_curlApiMutex.lock();
@@ -274,6 +279,10 @@ void CurlSelectMulti::readTaskResult()
                     curl_slist_free_all(it->second->headers);
                 }
                 m_mapRunningTask.erase(it);
+                if (g_searchonce && m_foundFiles.size() > 0) {
+                    m_bRunning = false;
+                    m_mapRunningTask.clear();
+                }
                 m_runningTaskMutex.unlock();
                 PutCurl(e);
             }
@@ -282,7 +291,7 @@ void CurlSelectMulti::readTaskResult()
                 m_curlApiMutex.lock();
                 curl_multi_remove_handle(m_pMultiHandle, e);
                 m_curlApiMutex.unlock();
-                printf("find map key failed");
+                // printf("find map key failed\n");
                 PutCurl(e);
             }
         }
@@ -323,6 +332,10 @@ void CurlSelectMulti::addTaskToMultiRequest(list<shared_ptr<Task>>& listTask)
         m_mapRunningTask[easy_handle]=item;
         m_runningTaskMutex.unlock();
         listTask.pop_front();
+        if (g_searchonce && m_foundFiles.size() > 0) {
+            m_mapRunningTask.clear();
+            break;
+        }
     }
 }
 

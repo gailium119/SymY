@@ -1,14 +1,15 @@
 ﻿// SymY.cpp 
 //
 
-#include <iostream>
 #include<Windows.h>
 #include "SymDL.h"
-#pragma comment(lib,"urlmon.lib")
 #pragma comment(lib,"shlwapi.lib")
 #include <stdio.h>
 #include <Shlwapi.h>
 #include <ctime>
+#include "Download.h"
+#include "Repro/SymRepro.h"
+extern bool g_searchonce;
 int main()
 {
 	TCHAR SymYini[MAX_PATH + 1] = { 0 };
@@ -27,6 +28,8 @@ int main()
 	bool isdebug = GetPrivateProfileIntW(L"Config", L"isdebug", 0, SymYini)==1;
 	bool timesearch = GetPrivateProfileIntW(L"Config", L"Timesearch", 0, SymYini) == 1;
 	bool imagesizesearch = GetPrivateProfileIntW(L"Config", L"ImageSizesearch", 0, SymYini) == 1;
+	bool searchonce = GetPrivateProfileIntW(L"Config", L"SearchOnce", 0, SymYini) == 1;
+	g_searchonce = searchonce;
 	bool autosrmlib = GetPrivateProfileIntW(L"Config", L"autosrmlib", 0, SymYini) == 1;
 	g_imagesizescale= GetPrivateProfileIntW(L"Config", L"ImageSizeScale", 0, SymYini);
 	if (g_imagesizescale == 0) g_imagesizescale = 0x1000;
@@ -45,14 +48,19 @@ int main()
 		wsprintfW(symname,L"srmlib.dll");
 		isdebug = true;
 		wsprintfW(arch, L"mips");
-
 	}
+	//DownSymRepro(&multServer, "D:\\csrss.exe",L".", 26000, 28000);
+	//return 0;
 	wprintf_s(L"%ls\n", symname);
-	if(timesearch)SearchAndDownloadAndMustFindTs(&multServer, symname, timestampmin, timestampmax, imagesizemin, imagesizemax, L".", arch, isdebug);
+	if(searchonce) DownSymWithThreads(&multServer, symname, timestampmin, timestampmax, imagesizemin, imagesizemax, L".");
+	else if(timesearch)SearchAndDownloadAndMustFindTs(&multServer, symname, timestampmin, timestampmax, imagesizemin, imagesizemax, L".", arch, isdebug);
 	else if (imagesizesearch)SearchAndDownloadAndMustFindIs(&multServer, symname, timestampmin, timestampmax, imagesizemin, imagesizemax, L".", arch, isdebug);
 	else SearchAndDownloadAndMustFind(&multServer, symname, timestampmin, timestampmax, imagesizemin, imagesizemax, L".", arch, isdebug);
 	list<std::string>::iterator iter;
 	printf("Done\n");
+	if (searchonce && multServer.m_foundFiles.size() == 0) {
+		exit(-1);
+	}
 	for (iter = multServer.m_foundFiles.begin(); iter != multServer.m_foundFiles.end(); iter++)
 	{
 		std::string url = *iter;
@@ -62,8 +70,8 @@ int main()
 		std::string tmp = url.substr(0, url.rfind("/"));
 			outputpath = std::string(".\\").append(tmp.substr(tmp.rfind("/") + 1)).append("_").append(outputpath);
 
-		printf(outputpath.c_str());
-		URLDownloadToFileA(NULL, url.c_str(), outputpath.c_str(), 0, NULL);
+		
+		DownloadFileWithCurl(url,outputpath);
 	}
 	delete[]g_importtable;
 	exit(0);

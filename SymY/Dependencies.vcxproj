@@ -68,36 +68,36 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
-    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)Temp\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
-    <IntDir>$(SolutionDir)Temp\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
+    <OutDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Lib\$(Configuration)_$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)Temp\VC$(PlatformToolsetVersion)\Dependencies\$(Configuration)_$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
